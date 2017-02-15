@@ -18,7 +18,7 @@
  * 마커 클러스터링을 정의합니다.
  * @param {Object} options 마커 클러스터링 옵션
  */
-var MarkerClustering = function(options) {
+window.NaverMarkerClustering = function(options) {
 	// 기본 값입니다.
 	this.DEFAULT_OPTIONS = {
 		// 클러스터 마커를 올릴 지도입니다.
@@ -50,7 +50,7 @@ var MarkerClustering = function(options) {
 	this.setMap(options.map || null);
 };
 
-naver.maps.Util.ClassExtend(MarkerClustering, naver.maps.OverlayView, {
+naver.maps.Util.ClassExtend(NaverMarkerClustering, naver.maps.OverlayView, {
 	onAdd: function() {
 		var map = this.getMap();
 
@@ -381,7 +381,7 @@ naver.maps.Util.ClassExtend(MarkerClustering, naver.maps.OverlayView, {
 		}
 
 		if (!closestCluster) {
-			closestCluster = new Cluster(this);
+			closestCluster = new NaverCluster(this);
 			this._clusters.push(closestCluster);
 		}
 
@@ -407,7 +407,7 @@ naver.maps.Util.ClassExtend(MarkerClustering, naver.maps.OverlayView, {
  * 마커를 가지고 있는 클러스터를 정의합니다.
  * @param {MarkerClustering} markerClusterer
  */
-var Cluster = function(markerClusterer) {
+window.NaverCluster = function(markerClusterer) {
 	this._clusterCenter = null;
 	this._clusterBounds = null;
 	this._clusterMarker = null;
@@ -418,8 +418,8 @@ var Cluster = function(markerClusterer) {
 	this._markerClusterer = markerClusterer;
 };
 
-Cluster.prototype = {
-	constructor: Cluster,
+NaverCluster.prototype = {
+	constructor: NaverCluster,
 
 	/**
 	 * 클러스터에 마커를 추가합니다.
