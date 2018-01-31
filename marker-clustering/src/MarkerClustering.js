@@ -685,3 +685,6 @@ NaverCluster.prototype = {
 		return this._clusterMember.indexOf(marker) !== -1;
 	}
 };
+
+
+export {NaverMarkerClustering, NaverCluster}
