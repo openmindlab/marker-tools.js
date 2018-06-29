@@ -1,0 +1,22 @@
+{
+  "name": "marker-tools",
+  "version": "1.0.0",
+  "description": "NAVER Maps JavaScript API v3를 이용한 유틸성 마커 예제입니다.",
+  "main": "marker-clustering/src/MarkerClustering.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openmindlab/marker-tools.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/openmindlab/marker-tools.js/issues"
+  },
+  "homepage": "https://github.com/openmindlab/marker-tools.js#readme"
+}
